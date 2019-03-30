@@ -79,6 +79,8 @@ mainMenu()
 
 // end menu
 function endMenu() {
+  main = false
+  play = false
   end = true
   intro.pause()
   bgSound.pause()
