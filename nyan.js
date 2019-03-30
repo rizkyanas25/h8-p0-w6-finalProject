@@ -51,12 +51,13 @@ debris[0] = {
 
 // main menu
 function mainMenu() {
-  intro.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-  }, false);
-  
-  intro.play()
+  if (main === true) {
+    intro.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    intro.play()
+  }
   
   context.drawImage(bg, 0,0)
 
@@ -162,11 +163,13 @@ function draw() {
   main = false
   play = true
   intro.pause()
-  bgSound.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-  }, false);
-  bgSound.play()
+  if (play === true) {
+    bgSound.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+    bgSound.play()
+  }
 
   var gap = 100
   var distance = 170
