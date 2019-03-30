@@ -98,11 +98,11 @@ function endMenu() {
   }
 
   if (score > 30 && score <= 50) {
-    context.fillText('AWESOME, MEOW!', 130, canvas.height - 200)
+    context.fillText('AWESOME, MEOW!', 110, canvas.height - 200)
   }
 
   if (score > 50) {
-    context.fillText('NEKO NO KAMI-SAMA!', 100, canvas.height - 200)
+    context.fillText('NEKO NO KAMI-SAMA!', 90, canvas.height - 200)
   }
 
   context.fillText('Press Space to', 135, canvas.height - 70)
@@ -169,6 +169,17 @@ function draw() {
   bgSound.play()
 
   var gap = 100
+  var distance = 170
+  if (score > 10 && score <= 30) {
+    distance = 160
+  }
+  if (score > 31 && score <= 50) {
+    distance = 150
+  }
+  if (score > 50) {
+    distance = 140
+  }
+
   var constant = debrisNorth.height + gap
   
   context.drawImage(bg, 0,0)
@@ -179,7 +190,7 @@ function draw() {
     debris[i].x--
     
     // display new set of debris
-    if (debris[i].x == canvas.width - 170) {
+    if (debris[i].x == canvas.width - distance) {
       debris.push({
         x : canvas.width,
         y : Math.floor(Math.random()*debrisNorth.height) - debrisNorth.height
@@ -211,6 +222,18 @@ function draw() {
   // display score
   context.fillStyle = '#D9C277'
   context.font = '20px Verdana'
+  if (score <=10) {
+    context.fillText('Level: Easy', 160, canvas.height - 40)
+  }
+  if (score > 10 && score <= 30) {
+    context.fillText('Level: Medium', 160, canvas.height - 40)
+  }
+  if (score > 30 && score <= 50) {
+    context.fillText('Level: Hard', 160, canvas.height - 40)    
+  }
+  if (score > 50) {
+    context.fillText('Level: Expert', 160, canvas.height - 40)
+  }
   context.fillText('Debris avoided : ' + score, 160, canvas.height - 20)
 
   requestAnimationFrame(draw)
