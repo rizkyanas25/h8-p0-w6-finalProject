@@ -174,7 +174,12 @@ function draw() {
   }
 
   var gap = 100
-  var distance = 170
+  var constant = debrisNorth.height + gap
+  
+  var distance = 0
+  if (score <= 10) {
+    distance = 170
+  }
   if (score > 10 && score <= 30) {
     distance = 160
   }
@@ -184,8 +189,6 @@ function draw() {
   if (score > 50) {
     distance = 140
   }
-
-  var constant = debrisNorth.height + gap
   
   context.drawImage(bg, 0,0)
 
