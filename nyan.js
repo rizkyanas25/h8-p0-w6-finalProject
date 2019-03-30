@@ -88,7 +88,19 @@ function endMenu() {
   context.fillStyle = 'white'
   context.font = '30px Verdana'
   context.fillText('Nyan had crashed :(', 100, canvas.height - 470)
-  context.fillText('Debris avoided : ' + score, 120, canvas.height - 420)
+  context.fillText('Debris avoided : ' + score, 110, canvas.height - 420)
+  if (score <= 10) {
+    context.fillText('Totally NOOB!',150, canvas.height - 200)
+  }
+  
+  if (score > 10 && score <= 30) {
+    context.fillText('Not Bad, meow!',130, canvas.height - 200)
+  }
+
+  if (score > 30) {
+    context.fillText('AWESOME, MEOW!',130, canvas.height - 200)
+  }
+
   context.fillText('Press Space to', 135, canvas.height - 70)
   context.fillText('Back to Main Menu', 105, canvas.height - 30)
 
@@ -101,9 +113,11 @@ document.onkeydown = checkKey;
 function checkKey(e) {
   e = e || window.event;
   if (main === true && e.keyCode == '13') {
+    // enter
     draw()
   }
   if (end === true && e.keyCode == '32') {
+    // space
       location.reload()
   }
   if (nY >= 10 && play === true && e.keyCode == '38') {
