@@ -90,15 +90,19 @@ function endMenu() {
   context.fillText('Nyan had crashed :(', 100, canvas.height - 470)
   context.fillText('Debris avoided : ' + score, 110, canvas.height - 420)
   if (score <= 10) {
-    context.fillText('Totally NOOB!',150, canvas.height - 200)
+    context.fillText('Totally NOOB!', 150, canvas.height - 200)
   }
   
   if (score > 10 && score <= 30) {
-    context.fillText('Not Bad, meow!',130, canvas.height - 200)
+    context.fillText('Not Bad, meow!', 130, canvas.height - 200)
   }
 
-  if (score > 30) {
-    context.fillText('AWESOME, MEOW!',130, canvas.height - 200)
+  if (score > 30 && score <= 50) {
+    context.fillText('AWESOME, MEOW!', 130, canvas.height - 200)
+  }
+
+  if (score > 50) {
+    context.fillText('NEKO NO KAMI-SAMA!', 100, canvas.height - 200)
   }
 
   context.fillText('Press Space to', 135, canvas.height - 70)
