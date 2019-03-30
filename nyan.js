@@ -139,7 +139,7 @@ function checkKey(e) {
     // left arrow
     moveLeft()
   }
-  else if (play === true && e.keyCode == '39') {
+  else if (nX <= 420 && play === true && e.keyCode == '39') {
     // right arrow
     moveRight()
   }
@@ -178,13 +178,13 @@ function draw() {
   
   var distance = 0
   if (score <= 10) {
-    distance = 170
+    distance = 200
   }
   if (score > 10 && score <= 30) {
-    distance = 160
+    distance = 180
   }
-  if (score > 31 && score <= 50) {
-    distance = 150
+  if (score > 30 && score <= 50) {
+    distance = 160
   }
   if (score > 50) {
     distance = 140
