@@ -21,11 +21,12 @@ var bgSound = new Audio()
 scr.src = 'sounds/meow.mp3'
 bgSound.src = 'sounds/loop.mp3'
 
-// bgSound.addEventListener('ended', function() {
-//     this.currentTime = 0;
-//     this.play();
-// }, false);
-// bgSound.play()
+bgSound.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+bgSound.play()
 
 // make another var
 var nX = 10
