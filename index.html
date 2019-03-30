@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+    <link rel="shorcut icon" href="./images/Nyan-Cat.png">
+    <title>Nyan no Uchuu Bouken</title>
+  </head>
+  <body>
+    <!-- <h3>Nyan no Uchuu Bouken</h3> -->
+    
+    <div class="titlecon">
+      <img class = "title" src= "./images/title.png">
+    </div>
+    
+    <iframe src="./sounds/loop.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
+    
+    <div id="content">
+      
+      <div id = "leftcontent">
+        <div class = "img1">
+          <img class = "stars" src="./images/stars.png">
+        </div>
+        <div class = "text1">
+            <p>Nyan is wandering in space because he smells something delicious that makes he curious..<br><br>
+              Can you help him find the origin of the smell ?<br><br>
+              Help him stay safe by avoiding the debris coming blocks his way!<br><br>
+              The debris contain<br>
+              Anti-Rainbow-Cat-Material :( 
+              </p>
+        </div>
+
+      </div>
+      
+      <div id = "maincontent">
+        <canvas id = "canvas" width = "500" height = "512"></canvas>
+      </div>
+      
+      <div id = "rightcontent">
+          <div class = "img2">
+          <img class = "stars" src="./images/stars2.png">
+          </div>
+            <div class = "text2">
+              <p>Use your keyboard arrow buttons to move..</p>
+                <img class = "arrow" src="./images/arrow.png">
+              <p></p>Try to not get close to the debris..<br><br>
+                  Oh also, don't try to land to the planet surface, it's gross..<br>
+                  YUCK !!
+              </p>
+            </div>
+      </div>
+    
+    </div>
+
+    <div class="footer">
+      <div class="author">
+        <p id= "name">Rizky Anas Bukhori © 2019</p>
+      </div>
+    </div>
+   
+    <script src = "nyan.js"></script>
+  </body>
+</html>
