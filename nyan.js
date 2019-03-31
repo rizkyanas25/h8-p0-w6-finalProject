@@ -176,10 +176,7 @@ function draw() {
   var gap = 100
   var constant = debrisNorth.height + gap
   
-  var distance = 0
-  if (score <= 10) {
-    distance = 200
-  }
+  var distance = 200
   if (score > 10 && score <= 30) {
     distance = 180
   }
